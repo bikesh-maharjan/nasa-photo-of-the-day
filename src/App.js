@@ -3,6 +3,14 @@ import "./App.css";
 import axios from "axios";
 import { API_KEY, BASE_URL } from "./Components/constant";
 import Header from "./Components/Header";
+import Info from "./Components/Info";
+import styled from "styled-components";
+import Footer from "./Components/Footer";
+
+const AppStyles = styled.div`
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+`;
 
 function App() {
   const [data, setData] = useState([]);
@@ -17,15 +25,14 @@ function App() {
       .catch((err) => {
         console.log(err);
       });
-  },[]);
+  }, []);
 
   return (
-    <div className="App">
-      <Header data={data}/>
-
-      <p>
-      </p>
-    </div>
+    <AppStyles className="App">
+      <Header data={data} />
+      <Info dateInfo={data.date} text={data.explanation} />
+      <Footer />
+    </AppStyles>
   );
 }
 
