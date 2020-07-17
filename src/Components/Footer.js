@@ -6,10 +6,9 @@ const StyledF = styled.footer`
   display: flex;
   flex-direction: column;
   background-color: grey;
-  
 
   h2 {
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     font-style: helvetica;
     padding: 1%;
     text-decoration: none;
@@ -17,25 +16,26 @@ const StyledF = styled.footer`
   p {
     font-size: 1rem;
     font-style: Helvetica;
-    padding: 1% 1%;
-    color: lightblue;
   }
   a {
     font-size: 1rem;
-    padding:  1%;
+    padding: 2%;
     text-decoration: none;
-    color: black;
-
+    color: lightblue;
   }
 `;
 
 const Footer = (props) => {
+  const { setHello, hello } = props;
   return (
     <StyledF className="footer">
       <h2>Contact</h2>
       <p> Bikesh Maharjan</p>
       <p> Full Stack Web Developer</p>
-      <a href="https://github.com/bikesh-maharjan"> Github</a>
+      <a href="https://github.com/bikesh-maharjan" target="_blank">
+        Github
+      </a>
+      <button onClick={() => setHello("I am bikesh")}> {hello}</button>
     </StyledF>
   );
 };

@@ -11,7 +11,7 @@ export default function Header(props) {
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
-      padding: 30px;
+      padding: 40px;
       background-color: black;
     }
     a {
@@ -20,24 +20,17 @@ export default function Header(props) {
       font-size: 1.8rem;
       font-weight: bold;
     }
-    h1 {
-      padding: 3%;
-      font-size: 3rem;
-    }
-    img{
-        height: 95vh;
-        width: auto;
-    }
   `;
   return (
     <HeaderDetails className="container">
       <nav>
-        <a href="">Home</a>
-        <a href="">About</a>
-        <a href="">Explore</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Explore</a>
+        <a href="#">Contact Us</a>
       </nav>
-      <h1>Astronomy Picture of the Day</h1>
-      <img src={data.data.url} alt="Nasa of the day" />
+      <h1>Nasa Photo of the Day</h1>
+     
     </HeaderDetails>
   );
 }
